@@ -145,6 +145,8 @@ struct ContentView: View {
             print("image saved")
         }
     
+    
+    //applying processing
         
         func applyProcessing(){
             let inputKeys = currentFilter.inputKeys
@@ -165,12 +167,18 @@ struct ContentView: View {
             
             if let cgimg = context.createCGImage(outputImage, from: outputImage.extent) {
                 let UIImage = UIImage(cgImage: cgimg)
+                
+                //image is an entity which is displaying all the changes on the screen (loaded image + image with processed filters)
                 image = Image(uiImage: UIImage)
+                
+                //processedImage is prepared for saving to the library
                 processedImage = UIImage
                 
             }
         }
         
+    
+    //setting filter
         func setFilter(_ filter: CIFilter) {
             currentFilter =  filter
             loadImage()

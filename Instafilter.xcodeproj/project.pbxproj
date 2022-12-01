@@ -45,6 +45,7 @@
 		AC6507A72938D4F900E6406B /* hidden */ = {
 			isa = PBXGroup;
 			children = (
+				AC6507A32938D11900E6406B /* ImageSaver.swift */,
 				AC6507A12938C04900E6406B /* ImagePicker.swift */,
 				AC91ECF12936A216008F5955 /* ContentView2.swift */,
 				AC65079F2938BF5400E6406B /* NewView.swift */,
@@ -73,7 +74,6 @@
 			children = (
 				AC91ECEF2936A216008F5955 /* InstafilterApp.swift */,
 				AC6507A52938D4E200E6406B /* ContentView.swift */,
-				AC6507A32938D11900E6406B /* ImageSaver.swift */,
 				ACD3775A29395CD30065DDCE /* ImagePickerSwiftUI.swift */,
 				AC6507A72938D4F900E6406B /* hidden */,
 				AC91ECF32936A217008F5955 /* Assets.xcassets */,
