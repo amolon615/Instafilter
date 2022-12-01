@@ -15,7 +15,6 @@
 		AC91ECF22936A216008F5955 /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC91ECF12936A216008F5955 /* ContentView2.swift */; };
 		AC91ECF42936A217008F5955 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC91ECF32936A217008F5955 /* Assets.xcassets */; };
 		AC91ECF72936A217008F5955 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC91ECF62936A217008F5955 /* Preview Assets.xcassets */; };
-		ACD3775B29395CD30065DDCE /* ImagePickerSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD3775A29395CD30065DDCE /* ImagePickerSwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		AC91ECF12936A216008F5955 /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
 		AC91ECF32936A217008F5955 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC91ECF62936A217008F5955 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ACD3775A29395CD30065DDCE /* ImagePickerSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerSwiftUI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +72,6 @@
 			children = (
 				AC91ECEF2936A216008F5955 /* InstafilterApp.swift */,
 				AC6507A52938D4E200E6406B /* ContentView.swift */,
-				ACD3775A29395CD30065DDCE /* ImagePickerSwiftUI.swift */,
 				AC6507A72938D4F900E6406B /* hidden */,
 				AC91ECF32936A217008F5955 /* Assets.xcassets */,
 				AC91ECF52936A217008F5955 /* Preview Content */,
@@ -161,7 +158,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6507A02938BF5400E6406B /* NewView.swift in Sources */,
-				ACD3775B29395CD30065DDCE /* ImagePickerSwiftUI.swift in Sources */,
 				AC6507A22938C04900E6406B /* ImagePicker.swift in Sources */,
 				AC6507A62938D4E200E6406B /* ContentView.swift in Sources */,
 				AC6507A42938D11900E6406B /* ImageSaver.swift in Sources */,

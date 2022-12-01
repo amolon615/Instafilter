@@ -15,6 +15,10 @@ struct ContentView: View {
     @State private var filterIntensity = 0.5
     @State private var showingImagePicker = false
     
+    //variable to change the name of the button, to display selected filter
+    //Sepia Tone is selected by default filter
+    @State private var selectedFilter = "Sepia Tone"
+    
     //our main image variable, which stores everything
     //later on we have to convert selected image from Picker to the same type
     //to oparate with it
@@ -55,7 +59,6 @@ struct ContentView: View {
                 if let selectedImage,
                     let inputImage = UIImage(data: selectedImage) {
                  
-                  //  Image(uiImage: inputImage)
                     image?
                         .resizable()
                         .scaledToFill()
@@ -72,7 +75,7 @@ struct ContentView: View {
                 .padding(.vertical)
                 
                 HStack{
-                    Button("Change filter"){
+                    Button(selectedFilter){
                         showingFilterSheet = true
                     }
                     Spacer()
@@ -85,41 +88,39 @@ struct ContentView: View {
             .padding([.horizontal, .bottom])
             .navigationTitle("Instafilter")
             .confirmationDialog("Select a filter", isPresented: $showingFilterSheet) {
-                Button("Crystalize"){
+                Button("Crystallize"){
                     setFilter(CIFilter.crystallize())
-                    print("selected crystylize")
+                    selectedFilter = "Selected Crystyllize"
                 }
                 Button("Edges"){
                     setFilter(CIFilter.edges())
-                    print("selected edges")
+                    selectedFilter = "Edges"
                 }
                 Button("Gaussian Blur"){
                     setFilter(CIFilter.gaussianBlur())
-                    print("selected gaussian blur")
+                    selectedFilter = "Gaussian Blur"
                 }
                 Button("Pixellate"){
                     setFilter(CIFilter.pixellate())
-                    print("selected pixellate")
+                    selectedFilter = "Pixellate"
                 }
                 Button("Sepia Tone"){
                     setFilter(CIFilter.sepiaTone())
-                    print("selected sepia tone")
+                    selectedFilter = "Sepia Tone"
                 }
                 Button("Unsharp mask"){
                     setFilter(CIFilter.unsharpMask())
-                    print("selected unsharp mask")
+                    selectedFilter = "Unsharp Mask"
                 }
                 Button("Vignette"){
                     setFilter(CIFilter.vignette())
-                    print("selected vignette")
+                    selectedFilter = "Vignette"
                 }
                 Button("Vibrance"){
                     setFilter(CIFilter.vibrance())
-                    print("selected vibrance")
+                    selectedFilter = "Vibrance"
                 }
-                Button("Cancel", role: .cancel){
-                    print("choice canceled")
-                }
+                Button("Cancel", role: .cancel){}
             }
         }
         }
@@ -133,8 +134,9 @@ struct ContentView: View {
             
             currentFilter.setValue(beginImage, forKey: kCIInputImageKey)
             applyProcessing()
+            
+            //enabling save button after image loading
             disableSave = false
-            print("image loaded")
         }
         
     
@@ -142,7 +144,6 @@ struct ContentView: View {
             guard let processedImage = processedImage else {return}
             let imageSaver = processedImage
             UIImageWriteToSavedPhotosAlbum(imageSaver, nil, nil, nil)
-            print("image saved")
         }
     
     
